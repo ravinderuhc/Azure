@@ -3,6 +3,13 @@ resource "azurerm_resource_group" "example" {
   name     = "${var.prefix}-resources"
   location = var.location
 }
+resource "azurerm_storage_account" "example" {
+  name                     = "ravinder270219"
+  resource_group_name      = "hmis-resources"
+  location                 = "East US" # or your desired Azure region
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
 
 resource "azurerm_virtual_network" "main" {
   name                = "${var.prefix}-network"
