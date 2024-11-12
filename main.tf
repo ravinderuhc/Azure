@@ -70,7 +70,7 @@ resource "azurerm_virtual_machine" "main" {
   }
 }
 
-# Azure Container Registry (ACR)
+# Azure Container Registry (ACR) Used
 resource "azurerm_container_registry" "example" {
   name                     = "${var.prefix}acr"
   location                 = azurerm_resource_group.example.location
